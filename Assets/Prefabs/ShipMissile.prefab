@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8187217820344528465}
   - component: {fileID: -3019838019361254692}
   - component: {fileID: 2475031403261876893}
+  - component: {fileID: 7665864241944094444}
   m_Layer: 0
   m_Name: ShipMissile
   m_TagString: Untagged
@@ -173,3 +174,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4000
   rb2D: {fileID: 8187217820344528465}
+--- !u!114 &7665864241944094444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191633528759690566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c423710bb8d684a9c7deff9e55531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

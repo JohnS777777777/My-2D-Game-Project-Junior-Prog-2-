@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 8.0f;
-    private float zBound = 6;
+    //public float zBound = 6;
+    public float yBound = 4;
+    public float xBound = 7;
     private Rigidbody playerRb;
 
     public float shootingDelay = 0.2f;
@@ -72,14 +74,26 @@ void MovePlayer()
 
     void ConstrainPlayerPosition()
     {
-        if (transform.position.z < -zBound)
+
+        // changed position z to x, testing
+        if (transform.position.x < -xBound)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -zBound);
+            transform.position = new Vector3(-xBound, transform.position.y, transform.position.z);
         }
         
-        if (transform.position.z > zBound)
+        if (transform.position.x > xBound)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
+            transform.position = new Vector3(xBound, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.y < -yBound)
+        {
+            transform.position = new Vector3(transform.position.x, -yBound, transform.position.z);
+        }
+
+        if (transform.position.y > yBound)
+        {
+            transform.position = new Vector3(transform.position.x, yBound, transform.position.z);
         }
     }
 
